@@ -14,7 +14,7 @@
         <script src="../assets/demo/chart-area-demo.js"></script>
         <script src="../assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-        
+        <script src="https://kit.fontawesome.com/165e5420fa.js" crossorigin="anonymous"></script>
         
     </body>
 </html>

@@ -33,13 +33,16 @@
     </div>
     </div>
     
-    <div class="col-md-4 mt-4">
-    <button class="w-100 btn btn-primary btn-lg" type="submit" name="simpan">
-        Upload
+    <div class="col-md-1 mt-1">
+    <button class="w-100 btn btn-primary btn-xs"  type="submit" name="simpan"><i class="fa fa-check-circle fa-lg" aria-hidden="true"></i>
+       
      </button>
      </div>
+     
 </form>
+
 </div>
+
 </div>
 </div>
 </div>

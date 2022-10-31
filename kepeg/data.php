@@ -20,13 +20,14 @@
                     DataTable Example
                         </div>
                             <div class="card-body">
-                                <table id="datatablesSimple" class="table table-striped table-sm">
+                            <div class="table-responsive">
+                                <table class="table table-borderless" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Nama</th>
-                                            <th>Nomor</th>
-                                            <th>Kategori</th>
-                                            <th>Aksi</th>
+                                            <th>Name</th>
+                                            <th>Position</th>
+                                            <th>Office</th>
+                                            <th>Age</th>
                                         </tr>
                                     </thead>
                                     <?php
@@ -37,25 +38,24 @@
                                     ?>
                                     <tbody>
                                         <tr>
-                                            <td><?php echo $data['n_dok']; ?></td>
+                                        <td><?php echo $data['n_dok']; ?></td>
                                             <td><?php echo $data['subag']; ?></td>
                                             <td><?php echo $data['file']; ?></td>
-                                            <td><a href="preview.php?id=<?php echo $data['id_dok'];?>" class="btn btn-primary btn-sm" >Preview</a>
-                                            <a href="hps.php?id=<?php echo $data['id_dok'];?>" onclick="return confirm('Yakin Hapus?')" class="btn btn-danger btn-sm" >Hapus</a>
-                                            <a href="unduh.php?file=<?php echo $data['file'];?>" class="btn btn-warning btn-sm" >Unduh</a>
-                                            
-                                        </td>
-                                            
+                                            <td><a href="preview.php?id=<?php echo $data['id_dok'];?>" class="btn btn-primary btn-sm" ><i class="fa fa-info fa-fw" aria-hidden="true"></i></a>
+                                            <a href="hps.php?id=<?php echo $data['id_dok'];?>" onclick="return confirm('Yakin Hapus?')" class="btn btn-danger btn-sm" ><i class="fa fa-trash fa-fw" aria-hidden="true"></i></a>
+                                            <a href="unduh.php?file=<?php echo $data['file'];?>" class="btn btn-warning btn-sm" ><i class="fa fa-cloud-download fa-fw" aria-hidden="true"></i></a></td>cloud-download
                                         </tr>
-                                        <?php
-                                }
-                                ?>
                                     </tbody>
+                                    <?php
+                                    }
+                                    ?>
                                 </table>
                               
                                 <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                    <a class="btn btn-primary" href="upload.php">Upload Data</a>
+                                    <a class="btn btn-success" href="upload.php"><i class="fa fa-cloud-upload fa-fw" aria-hidden="true"></i></a>
                                 </div>
+                                       
+                            
                             </div>
                         </div>
                         </div>
