@@ -29,10 +29,11 @@ include_once "../koneksi.php";
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Dashboard - SB Admin</title>
+        <title>Inventory</title>
         <link href="../assets/css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="../assets/datatables/datatables.min.css"/>
-        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="../assets/datatables/datatables.css"/>
+        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
     </head>
     <body class="sb-nav-fixed">

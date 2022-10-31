@@ -32,7 +32,6 @@
                                     </thead>
                                     <tbody>
                                     <?php
-                                    
                                     $sql = mysqli_query($koneksi, "SELECT a.id_dok, a.n_dok, a.subag, a.file FROM tb_dok a JOIN tb_user b ON a.subag=b.subag WHERE user='$_SESSION[username]' ") 
                                     or die (mysqli_error($koneksi));
                                     while($data = mysqli_fetch_array($sql)){
@@ -73,9 +72,6 @@
          }
           )} );
 
-          $('body').on('hidden.bs.modal', '.modal', function () {
-            $(this).removeData('bs.modal');
-        });
     </script>
 <?php
     include_once "../_footer.php";
