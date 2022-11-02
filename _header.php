@@ -31,9 +31,9 @@ include_once "../koneksi.php";
         <meta name="author" content="" />
         <title>Inventory</title>
         <link href="../assets/css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" type="text/css" href="../assets/datatables/datatables.min.css"/>
-        <link rel="stylesheet" type="text/css" href="../assets/datatables/datatables.css"/>
-        
+        <!-- <link rel="stylesheet" type="text/css" href="../assets/datatables/datatables.min.css"/>
+        <link rel="stylesheet" type="text/css" href="../assets/datatables/datatables.css"/> -->
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
     </head>
     <body class="sb-nav-fixed">

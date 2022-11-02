@@ -21,7 +21,7 @@
                         </div>
                             <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-borderless" id="myTable" width="100%" cellspacing="0">
+                                <table class="table table-borderless" id="datatablesSimple" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>Name</th>
@@ -61,18 +61,7 @@
                         </div>
                         </div>
                 </main>
-                <script>
-        $(document).ready(function(){
-         
-         $('#myTable').DataTable(
-            {
-                "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
-            //  dom:'lBfrtip',
-            //  button:['print'],
-         }
-          )} );
-
-    </script>
+                
 <?php
     include_once "../_footer.php";
 ?>
