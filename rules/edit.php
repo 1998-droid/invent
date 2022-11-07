@@ -1,5 +1,6 @@
 <?php
     include_once "../_header.php";
+    
 ?>
 <div id="layoutSidenav_content">
 <main>
@@ -10,22 +11,29 @@
                 <div class="card-header"><h3 class="text-center font-weight-light my-4">Edit File</h3></div>
                 <div class="card-body">
 <form action="pro.php" method="post" enctype="multipart/form-data">
+    <?php
+        $id    = mysqli_real_escape_string($koneksi,$_GET['id']);
+        $query = mysqli_query($koneksi,"SELECT a.id_aturan,a.n_dok, a.subag, a.file FROM tb_dok a 
+        WHERE id_aturan='$id' ");
+        $data  = mysqli_fetch_array($query);
+    ?>
     <div class="row g-2">
     <div class="col-md-4">
         <div class="form-floating">
-        <input type="text" class="form-control" name="n_dok" id="floatingInputGrid" placeholder="nama dokumen" required>
+        <input type="hidden" value="<?=($data['id_aturan'])?>">
+        <input type="text" class="form-control" name="n_dok" id="floatingInputGrid" placeholder="nama dokumen" value="<?=($data['n_dok'])?>" required>
         <label for="floatingInputGrid">Nama Dokumen</label>
     </div>
     </div>
     <div class="col-md-4">
         <div class="form-floating">
-        <input type="text" class="form-control" name="tahun" id="floatingInputGrid" placeholder="nama dokumen" required>
+        <input type="text" class="form-control" name="tahun" id="floatingInputGrid" placeholder="nama dokumen" value="<?=($data['tahun'])?>" required>
         <label for="floatingInputGrid">Tahun Dokumen</label>
     </div>
     </div>
     <div class="col-md-4">
         <div class="form-floating">
-        <input type="text" class="form-control" name="tentang" id="floatingInputGrid" placeholder="tentang" required>
+        <input type="text" class="form-control" name="tentang" id="floatingInputGrid" placeholder="tentang" value="<?=($data['tentang'])?>" required>
         <label for="floatingInputGrid">Tentang</label>
     </div>
     </div>
@@ -39,12 +47,12 @@
     <div class="row g-2">
     <div class="col-md-4 mt-4">
         <div class="form-floating">
-        <input type="file" id="pdf-file" name="file" accept="application/pdf" required>
+        <input type="file" id="pdf-file" name="file" accept="application/pdf" value="<?=($data['file'])?>" required>
     </div>
     </div>
     
     <div class="col-md-1 mt-1">
-    <button class="w-100 btn btn-primary btn-xs"  type="submit" name="simpan"><i class="fa fa-check-circle fa-lg" aria-hidden="true"></i>
+    <button class="w-100 btn btn-primary btn-xs"  type="submit" name="edit"><i class="fa fa-check-circle fa-lg" aria-hidden="true"></i>
      </button>
      </div>
      
@@ -58,6 +66,6 @@
 </div>
 </main>
 
-                    <?php
+<?php
     include_once "../_footer.php";
 ?>

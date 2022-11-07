@@ -5,14 +5,16 @@ if(isset($_POST['simpan'])){
         if ($tipe_file == "application/pdf") //mengecek apakah file tersebu pdf atau bukan
         {
         $nama     = trim($_POST['n_dok']);
-        $nomor    = trim($_POST['subag']);
+        $thn     = trim($_POST['tahun']);
+        $ten     = trim($_POST['tentang']);
+        $subag    = trim($_POST['subag']);
         $file 	= trim($_FILES['file']['name']);
 
-        $sql = "INSERT INTO tb_aturan  (n_dok, subag) VALUES ('$nama', '$nomor')";
+        $sql = "INSERT INTO tb_aturan  (n_dok, tahun, tentang, subag) VALUES ('$nama', '$thn', '$ten', '$subag')";
         mysqli_query($koneksi,$sql); //simpan data judul dahulu untuk mendapatkan id
 
         //dapatkan id terkahir
-        $query = mysqli_query($koneksi,"SELECT n_dok, subag FROM tb_aturan  ORDER BY id_dok DESC LIMIT 1");
+        $query = mysqli_query($koneksi,"SELECT n_dok, subag FROM tb_aturan  ORDER BY id_aturan DESC LIMIT 1");
         $data  = mysqli_fetch_array($query);
 
         //mengganti nama pdf

@@ -21,7 +21,7 @@
     </div>
     <div class="col-md-4">
         <div class="form-floating">
-        <input type="text" class="form-control" name="tahun" id="floatingInputGrid" placeholder="nama dokumen" required>
+        <input type="number" class="form-control" name="tahun" id="floatingInputGrid" placeholder="nama dokumen" required>
         <label for="floatingInputGrid">Tahun Dokumen</label>
     </div>
     </div>

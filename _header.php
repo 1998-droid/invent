@@ -85,7 +85,7 @@ include_once "../koneksi.php";
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.html"><i class="fa fa-book fa-fw"></i>&nbsp; Perdir</a>
+                                    <a class="nav-link" href="../rules"><i class="fa fa-book fa-fw"></i>&nbsp; Perdir</a>
                                     <a class="nav-link" href="layout-sidenav-light.html"><i class="fa fa-book fa-fw"></i>&nbsp; Perbup</a>
                                 </nav>
                             </div>
