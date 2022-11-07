@@ -9,7 +9,7 @@
     
     <?php
     $id    = mysqli_real_escape_string($koneksi,$_GET['id']);
-    $query = mysqli_query($koneksi,"SELECT a.id_aturan,a.n_dok, a.subag, a.file FROM tb_dok a 
+    $query = mysqli_query($koneksi,"SELECT a.id_aturan,a.n_dok, a.subag, a.file FROM tb_aturan a 
     WHERE id_aturan='$id' ");
     $data  = mysqli_fetch_array($query);
 

@@ -13,7 +13,7 @@
 <form action="pro.php" method="post" enctype="multipart/form-data">
     <?php
         $id    = mysqli_real_escape_string($koneksi,$_GET['id']);
-        $query = mysqli_query($koneksi,"SELECT a.id_aturan,a.n_dok, a.subag, a.file FROM tb_dok a 
+        $query = mysqli_query($koneksi,"SELECT * , file FROM tb_aturan
         WHERE id_aturan='$id' ");
         $data  = mysqli_fetch_array($query);
     ?>
@@ -47,7 +47,7 @@
     <div class="row g-2">
     <div class="col-md-4 mt-4">
         <div class="form-floating">
-        <input type="file" id="pdf-file" name="file" accept="application/pdf" value="<?=($data['file'])?>" required>
+        <input type="file" name="file" accept="application/pdf" value ="file/<?php ($data['file'])?>" required>
     </div>
     </div>
     
