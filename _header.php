@@ -69,11 +69,11 @@ include_once "../koneksi.php";
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
-                            <a class="nav-link" href="../kepeg/data.php">
+                            <a class="nav-link" href="../manage">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Data All
                             </a>
-                            <a class="nav-link" href="../ep">
+                            <a class="nav-link" href="../rules">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Data EP
                             </a>
