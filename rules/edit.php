@@ -20,7 +20,7 @@
     <div class="row g-2">
     <div class="col-md-4">
         <div class="form-floating">
-        <input type="hidden" value="<?=($data['id_aturan'])?>">
+        <input type="hidden" name="id" value="<?=($data['id_aturan'])?>">
         <input type="text" class="form-control" name="n_dok" id="floatingInputGrid" placeholder="nama dokumen" value="<?=($data['n_dok'])?>" required>
         <label for="floatingInputGrid">Nama Dokumen</label>
     </div>
@@ -47,7 +47,13 @@
     <div class="row g-2">
     <div class="col-md-4 mt-4">
         <div class="form-floating">
-        <input type="file" name="file" accept="application/pdf" value ="file/<?php ($data['file'])?>" required>
+        <input type="file" name="file" accept="application/pdf" value ="<?php ($data['file'])?>" required>
+    </div>
+    </div>
+    <div class="row g-2">
+    <div class="col-md-4 mt-4">
+        <div class="form-floating">
+        <embed src="file/<?php echo $data['file'];?>" name="id_2" type="application/pdf" width="400" height="400">
     </div>
     </div>
     

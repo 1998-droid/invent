@@ -40,10 +40,23 @@ if(isset($_POST['simpan'])){
 }
 else if (isset($_POST['edit']))
 {
+        $id_2    = mysqli_real_escape_string($koneksi,$_GET['id_2']);
+        $query = mysqli_query($koneksi,"SELECT file FROM tb_aturan  ORDER BY id_aturan ='$id_2' DESC LIMIT 1");
+        $data  = mysqli_fetch_array($query);
+
+        $pilih = mysqli_query($koneksi,"SELECT file FROM tb_aturan  WHERE id_aturan ='$id_2'");
+
+        $data = mysqli_fetch_array($pilih);
+
+        $foto = $data['file'];
+
+        unlink("file/".$foto);
+
+        $query = mysqli_query($koneksi,"DELETE FROM tb_aturan WHERE id_aturan ='$id' ");
         $tipe_file = $_FILES['file']['type']; //mendapatkan mime type
         if ($tipe_file == "application/pdf") //mengecek apakah file tersebu pdf atau bukan
         {
-        $id = trim($_POST);
+        $id = trim($_POST['id']);
         $nama     = trim($_POST['n_dok']);
         $thn     = trim($_POST['tahun']);
         $ten     = trim($_POST['tentang']);
@@ -59,6 +72,7 @@ else if (isset($_POST['edit']))
         $folder    = "file"; //folder tujuan
         move_uploaded_file($file_temp, "$folder/$nama_baru"); //fungsi upload
         mysqli_query($koneksi,"UPDATE tb_aturan  SET file='$nama_baru' WHERE n_dok='$data[n_dok]' ");
+        header('location:data.php?alert=upload-berhasil');
         } 
 }
 
