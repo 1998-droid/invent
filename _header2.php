@@ -30,6 +30,7 @@ include_once "../koneksi.php";
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Inventory</title>
+        <link rel="icon" type="image/png" href="../assets/img/rsud.ico" />
         <link href="../assets/css/styles.css" rel="stylesheet" />
         <!-- <link rel="stylesheet" type="text/css" href="../assets/datatables/datatables.min.css"/>
         <link rel="stylesheet" type="text/css" href="../assets/datatables/datatables.css"/> -->
@@ -39,7 +40,7 @@ include_once "../koneksi.php";
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="../index.html">Repository</a>
+            <a class="navbar-brand ps-3" href="../index.html">Start Bootstrap</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -73,10 +74,10 @@ include_once "../koneksi.php";
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Data All
                             </a>
-                            <!-- <a class="nav-link" href="../rules">
+                            <a class="nav-link" href="../rules">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Data EP
-                            </a> -->
+                            </a>
                             <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>

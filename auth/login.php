@@ -32,9 +32,9 @@
 <div class="limiter">
 <div class="container-login100">
 <div class="wrap-login100">
-<div class="login100-form-title" style="background-image: url(../assets/login/images/bg-01.jpg);">
+<div class="login100-form-title" style="background-image: url(../assets/login/images/l.jpg);">
 <span class="login100-form-title-1">
-Sign In
+repository rsud majenang 
 </span>
 </div>
 <form action="pro_log.php" method="post" class="login100-form validate-form">
