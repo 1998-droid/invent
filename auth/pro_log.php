@@ -41,14 +41,14 @@ if($cek > 0){
 		header("location:../manage");
  
 	// cek jika user login sebagai pengurus
-	}else if($data['role']=="pelayanan"){
+	}else if($data['role']=="pegawai"){
 		// buat session login dan username
 		$_SESSION['username'] = $data['user'];
 		$_SESSION['role'] = $data['role'];
 		$_SESSION['nama']    = $data['n_user'];
 		$_SESSION['subag']    = $data['subag'];
 		// alihkan ke halaman dashboard pegawai
-		header("location:../pel");
+		header("location:../kep");
  
 	// cek jika user login sebagai pengurus
 	}else{
