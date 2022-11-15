@@ -29,6 +29,7 @@ include_once "../koneksi.php";
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
+        <link rel="icon" type="image/png" href="../assets/img/rsud.ico" />
         <title>Inventory</title>
         <link href="../assets/css/styles.css" rel="stylesheet" />
         <!-- <link rel="stylesheet" type="text/css" href="../assets/datatables/datatables.min.css"/>
@@ -69,14 +70,14 @@ include_once "../koneksi.php";
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
-                            <a class="nav-link" href="../manage">
+                            <a class="nav-link" href="../manage/data_all.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Data All
                             </a>
-                            <!-- <a class="nav-link" href="../rules">
+                            <a class="nav-link" href="../manage">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Data EP
-                            </a> -->
+                                Data
+                            </a>
                             <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>

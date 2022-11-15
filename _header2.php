@@ -78,7 +78,7 @@ include_once "../koneksi.php";
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Data EP
                             </a>
-                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            <!-- <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Peraturan RS
@@ -89,7 +89,7 @@ include_once "../koneksi.php";
                                     <a class="nav-link" href="../rules"><i class="fa fa-book fa-fw"></i>&nbsp; Perdir</a>
                                     <a class="nav-link" href="layout-sidenav-light.html"><i class="fa fa-book fa-fw"></i>&nbsp; Perbup</a>
                                 </nav>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">

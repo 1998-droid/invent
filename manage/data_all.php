@@ -5,7 +5,7 @@
 <div id="layoutSidenav_content">
    <main>
        <div class="container-fluid px-4">
-           <h1 class="mt-4">Tables</h1>
+           <h1 class="mt-4">Table Dokumen Manajemen</h1>
            <ol class="breadcrumb mb-4">
            </ol>
            <div class="card mb-4">
@@ -24,15 +24,15 @@
                                 <table class="table table-borderless" id="datatablesSimple" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
+                                            <th>Nama Dokumen</th>
+                                            <th>Subag</th>
+                                            <th>File</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                     <?php
-                                    $sql = mysqli_query($koneksi, "SELECT a.id_aturan, a.n_dok, a.subag, a.tahun, a.file FROM tb_aturan a JOIN tb_user b ON a.subag=b.subag WHERE user='$_SESSION[username]' ") 
+                                    $sql = mysqli_query($koneksi, "SELECT * FROM tb_dok") 
                                     or die (mysqli_error($koneksi));
                                     while($data = mysqli_fetch_array($sql)){
                                     ?>
@@ -41,10 +41,8 @@
                                         <td><?php echo $data['n_dok']; ?></td>
                                             <td><?php echo $data['subag']; ?></td>
                                             <td><?php echo $data['file']; ?></td>
-                                            <td><a href="preview.php?id=<?php echo $data['id_aturan'];?>" class="btn btn-primary btn-sm" ><i class="fa fa-info fa-fw" aria-hidden="true"></i></a>
-                                            <a href="edit.php?id=<?php echo $data['id_aturan'];?>" class="btn btn-info btn-sm" ><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i></a>
-                                            <a href="hps.php?id=<?php echo $data['id_aturan'];?>" onclick="return confirm('Yakin Hapus?')" class="btn btn-danger btn-sm" ><i class="fa fa-trash fa-fw" aria-hidden="true"></i></a>
-                                            
+                                            <td><a href="preview.php?id=<?php echo $data['id_dok'];?>" class="btn btn-primary btn-sm" ><i class="fa fa-info fa-fw" aria-hidden="true"></i></a>
+                                            <a href="hps.php?id=<?php echo $data['id_dok'];?>" onclick="return confirm('Yakin Hapus?')" class="btn btn-danger btn-sm" ><i class="fa fa-trash fa-fw" aria-hidden="true"></i></a>
                                             <a href="unduh.php?file=<?php echo $data['file'];?>" class="btn btn-warning btn-sm" ><i class="fa fa-cloud-download fa-fw" aria-hidden="true"></i></a>
                                             <?php
                                     }

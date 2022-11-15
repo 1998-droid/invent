@@ -1,5 +1,5 @@
 <?php
-    include_once "../_header.php";
+    include_once "../_header2.php";
 ?>
 <script src="pdf.js"></script>
 <script src="pdf.worker.js"></script>
@@ -49,5 +49,5 @@
 </main>
 
                     <?php
-    include_once "../_footer.php";
+    include_once "../_footer2.php";
 ?>

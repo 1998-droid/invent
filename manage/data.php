@@ -5,12 +5,12 @@
 <div id="layoutSidenav_content">
    <main>
        <div class="container-fluid px-4">
-           <h1 class="mt-4">Table Dokumen</h1>
+           <h1 class="mt-4">Table Dokumen Manajemen</h1>
            <ol class="breadcrumb mb-4">
            </ol>
            <div class="card mb-4">
                <div class="card-body">
-                    DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
+                    <!-- DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the -->
                     <!-- <a target="_blank" href="https://datatables.net/">official DataTables documentation</a> -->
                 </div>
                 </div>
@@ -24,10 +24,10 @@
                                 <table class="table table-borderless" id="datatablesSimple" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
+                                            <th>Nama Dokumen</th>
+                                            <th>Subag</th>
+                                            <th>File</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
