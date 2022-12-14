@@ -34,7 +34,7 @@
     </div>
     
     <div class="col-md-1 mt-1">
-    <button class="w-100 btn btn-primary btn-xs"  onclick="return confirm('Yakin Hapus?')" type="submit" name="simpan"><i class="fa fa-check-circle fa-lg" aria-hidden="true"></i>
+    <button class="w-100 btn btn-primary btn-xs"  onclick="return confirm('File sudah benar ?')" type="submit" name="simpan"><i class="fa fa-check-circle fa-lg" aria-hidden="true"></i>
      </button>
      </div>
      

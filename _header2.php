@@ -40,7 +40,7 @@ include_once "../koneksi.php";
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="../index.html">Start Bootstrap</a>
+            <a class="navbar-brand ps-3" href="../index.html">Repository</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -66,17 +66,17 @@ include_once "../koneksi.php";
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="../dashboard">
+                            <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
-                            <a class="nav-link" href="../manage">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            <a class="nav-link" href="../kep/data_all.php">
+                                <div class="sb-nav-link-icon"><i class="fa-sharp fa-solid fa-cloud"></i></div>
                                 Data All
                             </a>
-                            <a class="nav-link" href="../rules">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Data EP
+                            <a class="nav-link" href="../kep">
+                                <div class="sb-nav-link-icon"><i class="fa-sharp fa-solid fa-cloud"></i></div>
+                                Data
                             </a>
                             <!-- <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">

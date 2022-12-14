@@ -5,7 +5,7 @@
 <div id="layoutSidenav_content">
    <main>
        <div class="container-fluid px-4">
-           <h1 class="mt-4">Table Dokumen</h1>
+           <h1 class="mt-4">Table Dokumen Manajemen</h1>
            <ol class="breadcrumb mb-4">
            </ol>
            <div class="card mb-4">
@@ -32,7 +32,7 @@
                                     </thead>
                                     <tbody>
                                     <?php
-                                    $sql = mysqli_query($koneksi, "SELECT a.id_dok, a.n_dok, a.subag, a.file FROM tb_dok a JOIN tb_user b ON a.subag=b.subag WHERE user='$_SESSION[username]' ") 
+                                    $sql = mysqli_query($koneksi, "SELECT * FROM tb_dok") 
                                     or die (mysqli_error($koneksi));
                                     while($data = mysqli_fetch_array($sql)){
                                     ?>
@@ -42,7 +42,6 @@
                                             <td><?php echo $data['subag']; ?></td>
                                             <td><?php echo $data['file']; ?></td>
                                             <td><a href="preview.php?id=<?php echo $data['id_dok'];?>" class="btn btn-primary btn-sm" ><i class="fa fa-info fa-fw" aria-hidden="true"></i></a>
-                                            <a href="edit.php?id=<?php echo $data['id_dok'];?>" class="btn btn-info btn-sm" ><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i></a>
                                             <a href="hps.php?id=<?php echo $data['id_dok'];?>" onclick="return confirm('Yakin Hapus?')" class="btn btn-danger btn-sm" ><i class="fa fa-trash fa-fw" aria-hidden="true"></i></a>
                                             <a href="unduh.php?file=<?php echo $data['file'];?>" class="btn btn-warning btn-sm" ><i class="fa fa-cloud-download fa-fw" aria-hidden="true"></i></a>
                                             <?php
