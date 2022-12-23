@@ -25,6 +25,8 @@
                                     <thead>
                                         <tr>
                                             <th>Nama Dokumen</th>
+                                            <th>Tahun</th>
+                                            <th>Nomor</th>
                                             <th>Subag</th>
                                             <th>File</th>
                                             <th>Aksi</th>
@@ -32,7 +34,7 @@
                                     </thead>
                                     <tbody>
                                     <?php
-                                    $sql = mysqli_query($koneksi, "SELECT a.id_dok, a.n_dok, a.subag, a.file FROM tb_dok a JOIN tb_user b ON a.subag=b.subag WHERE user='$_SESSION[username]' ") 
+                                    $sql = mysqli_query($koneksi, "SELECT *, a.id_dok, a.n_dok, a.subag, a.file FROM tb_dok a JOIN tb_user b ON a.subag=b.subag WHERE user='$_SESSION[username]' ") 
                                     or die (mysqli_error($koneksi));
                                     while($data = mysqli_fetch_array($sql)){
                                     ?>

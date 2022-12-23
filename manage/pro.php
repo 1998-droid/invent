@@ -6,7 +6,7 @@ if(isset($_POST['simpan'])){
         {
         $nama     = trim($_POST['n_dok']);
         $tahun     = trim($_POST['tahun']);
-        $nomor    = trim($_POST['subag']);
+        $nomor    = trim($_POST['nomor']);
         $subag    = trim($_POST['subag']);
         $file 	= trim($_FILES['file']['name']);
 
