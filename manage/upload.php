@@ -15,8 +15,20 @@
     <div class="row g-2">
     <div class="col-md-4">
         <div class="form-floating">
-        <input type="text" class="form-control" name="n_dok" id="floatingInputGrid" placeholder="nama" required>
-        <label for="floatingInputGrid">nama</label>
+        <input type="text" class="form-control" name="n_dok" id="floatingInputGrid" placeholder="Nama Dokumen" required>
+        <label for="floatingInputGrid">Nama Dokumen</label>
+    </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-floating">
+        <input type="date" class="form-control" name="tahun" id="floatingInputGrid" placeholder="Tahun" required>
+        <label for="floatingInputGrid">Tahun</label>
+    </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-floating">
+        <input type="number" class="form-control" name="nomor" id="floatingInputGrid" placeholder="Nomor Dokumen" required>
+        <label for="floatingInputGrid">Nomor Dokumen</label>
     </div>
     </div>
     <div class="col-md-4">

@@ -51,7 +51,18 @@ if($cek > 0){
 		header("location:../kep");
  
 	// cek jika user login sebagai pengurus
-	}else{
+	}else if($data['role']=="izin"){
+		// buat session login dan username
+		$_SESSION['username'] = $data['user'];
+		$_SESSION['role'] = $data['role'];
+		$_SESSION['nama']    = $data['n_user'];
+		$_SESSION['subag']    = $data['subag'];
+		// alihkan ke halaman dashboard pegawai
+		header("location:../izin");
+ 
+	// cek jika user login sebagai pengurus
+	}
+	else{
  
 		// alihkan ke halaman login kembali
 		header("location:login.php?pesan=gagal");
