@@ -5,10 +5,12 @@ if(isset($_POST['simpan'])){
         if ($tipe_file == "application/pdf") //mengecek apakah file tersebu pdf atau bukan
         {
         $nama     = trim($_POST['n_dok']);
-        $nomor    = trim($_POST['subag']);
+        $tahun     = trim($_POST['tahun']);
+        $nomor    = trim($_POST['nomor']);
+        $subag    = trim($_POST['subag']);
         $file 	= trim($_FILES['file']['name']);
 
-        $sql = "INSERT INTO tb_dok  (n_dok, subag) VALUES ('$nama', '$nomor')";
+        $sql = "INSERT INTO tb_dok  (n_dok, tahun, nomor, subag) VALUES ('$nama', '$tahun', '$nomor', '$subag')";
         mysqli_query($koneksi,$sql); //simpan data judul dahulu untuk mendapatkan id
 
         //dapatkan id terkahir
