@@ -1,25 +1,25 @@
 <?php
 include_once "../koneksi.php";
 // session_start();
-// 	if($_SESSION['user']){
-// 		header("location: ../auth");
-// 	}
-// 	if(!isset($_SESSION['user'])){
-// 	   die("<b>Oops!</b> Access Failed.
-// 		   <p>Sistem Logout. Anda harus melakukan Login kembali.</p>
-// 		   <button type='button' onclick=location.href='./'>Back</button>");
+//     if($_SESSION['user']){
+//         header("location: ../auth");
+//     }
+//     if(!isset($_SESSION['user'])){
+//        die("<b>Oops!</b> Access Failed.
+//            <p>Sistem Logout. Anda harus melakukan Login kembali.</p>
+//            <button type='button' onclick=location.href='./'>Back</button>");
 //    }
 //    if($_SESSION['hak_akses']!="kepeg"){
-// 	   die("<b>Oops!</b> Access Failed.
-// 		   <p>Anda Bukan Pegawai.</p>
-// 		   <button type='button' onclick=location.href='./'>Back</button>");}
+//        die("<b>Oops!</b> Access Failed.
+//            <p>Anda Bukan Pegawai.</p>
+//            <button type='button' onclick=location.href='./'>Back</button>");}
 
-           session_start();
- 
-	 //cek apakah yang mengakses halaman ini sudah login
-	if($_SESSION['role']==""){
-		header("location:../auth/login.php?pesan=gagal");
-	}
+session_start();
+
+//cek apakah yang mengakses halaman ini sudah login
+if ($_SESSION['role'] == "") {
+    header("location:../auth/login.php?pesan=gagal");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +45,7 @@ include_once "../koneksi.php";
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                
+
             </form>
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
@@ -60,6 +60,7 @@ include_once "../koneksi.php";
                 </li>
             </ul>
         </nav>
+
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
@@ -74,7 +75,7 @@ include_once "../koneksi.php";
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Data All
                             </a>
-                            <a class="nav-link" href="../manage">
+                            <a class="nav-link" href="../manage/data.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Data
                             </a>
@@ -88,13 +89,16 @@ include_once "../koneksi.php";
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="../rules"><i class="fa fa-book fa-fw"></i>&nbsp; Perdir</a>
                                     <a class="nav-link" href="layout-sidenav-light.html"><i class="fa fa-book fa-fw"></i>&nbsp; Perbup</a>
+
                                 </nav>
                             </div>
                         </div>
                     </div>
+
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as</div>
                         <b><?=($_SESSION['role'])?></b>
                     </div>
                 </nav>
             </div>
+

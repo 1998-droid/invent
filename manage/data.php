@@ -41,7 +41,7 @@
                                     
                                         <tr>
                                         <td><?php echo $data['n_dok']; ?></td>
-                                        <td><?php echo $data['tahun']; ?></td>
+                                        <td><?php echo tgl_indo(date($data['tahun']));?></td>
                                         <td><?php echo $data['nomor']; ?></td>
                                         <td><?php echo $data['subag']; ?></td>
                                         <td><?php echo $data['file']; ?></td>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 14 Des 2022 pada 07.13
+-- Waktu pembuatan: 28 Jan 2023 pada 02.16
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 8.1.6
 
@@ -41,7 +41,8 @@ CREATE TABLE `tb_aturan` (
 --
 
 INSERT INTO `tb_aturan` (`id_aturan`, `n_dok`, `tahun`, `tentang`, `subag`, `file`) VALUES
-(9, 'tio', '2025', 'hukuman hhh', 'Manajemen', 'Manajemen_tio.pdf');
+(9, 'tio', '2025', 'hukuman hhh', 'Manajemen', 'Manajemen_tio.pdf'),
+(10, 'pentol', '2023', 'jajanan bocah', 'Manajemen', 'Manajemen_pentol.pdf');
 
 -- --------------------------------------------------------
 
@@ -52,6 +53,8 @@ INSERT INTO `tb_aturan` (`id_aturan`, `n_dok`, `tahun`, `tentang`, `subag`, `fil
 CREATE TABLE `tb_dok` (
   `id_dok` int(255) NOT NULL,
   `n_dok` varchar(50) NOT NULL,
+  `tahun` date NOT NULL,
+  `nomor` varchar(30) NOT NULL,
   `subag` varchar(20) NOT NULL,
   `file` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -60,9 +63,27 @@ CREATE TABLE `tb_dok` (
 -- Dumping data untuk tabel `tb_dok`
 --
 
-INSERT INTO `tb_dok` (`id_dok`, `n_dok`, `subag`, `file`) VALUES
-(1, 'tio', 'Pelayanan', 'kepeg_tio.pdf'),
-(2, 'tio', 'kepeg', 'kepeg_tio.pdf');
+INSERT INTO `tb_dok` (`id_dok`, `n_dok`, `tahun`, `nomor`, `subag`, `file`) VALUES
+(3, 'tio', '2022-12-09', '123', 'Manajemen', 'Manajemen_tio.pdf');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_izin`
+--
+
+CREATE TABLE `tb_izin` (
+  `id_izin` int(255) NOT NULL,
+  `n_ijin` varchar(50) NOT NULL,
+  `tgl_masuk` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tb_izin`
+--
+
+INSERT INTO `tb_izin` (`id_izin`, `n_ijin`, `tgl_masuk`) VALUES
+(1, 'aa', '2022-12-01');
 
 -- --------------------------------------------------------
 
@@ -99,7 +120,8 @@ CREATE TABLE `tb_user` (
 INSERT INTO `tb_user` (`id_user`, `user`, `pass`, `n_user`, `role`, `status`, `subag`) VALUES
 (2, 'tio', '1', 'Tioramdani, S.Kom', 'pegawai', 'enable', 'kepeg'),
 (3, 'feri', '1', 'dr. Feri Sulistya, MMR', 'manage', 'enable', 'Manajemen'),
-(4, 'tidak', '1', 'tida tahu, S.Kep, Ns', 'pegawai', 'enable', 'Pelayanan');
+(4, 'tidak', '1', 'tida tahu, S.Kep, Ns', 'pegawai', 'enable', 'Pelayanan'),
+(5, 'ram', '1', 'ramdani', 'izin', 'enable', 'izin');
 
 --
 -- Indexes for dumped tables
@@ -116,6 +138,12 @@ ALTER TABLE `tb_aturan`
 --
 ALTER TABLE `tb_dok`
   ADD PRIMARY KEY (`id_dok`);
+
+--
+-- Indeks untuk tabel `tb_izin`
+--
+ALTER TABLE `tb_izin`
+  ADD PRIMARY KEY (`id_izin`);
 
 --
 -- Indeks untuk tabel `tb_ruang`
@@ -137,13 +165,19 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT untuk tabel `tb_aturan`
 --
 ALTER TABLE `tb_aturan`
-  MODIFY `id_aturan` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_aturan` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_dok`
 --
 ALTER TABLE `tb_dok`
-  MODIFY `id_dok` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_dok` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT untuk tabel `tb_izin`
+--
+ALTER TABLE `tb_izin`
+  MODIFY `id_izin` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_ruang`
@@ -155,7 +189,7 @@ ALTER TABLE `tb_ruang`
 -- AUTO_INCREMENT untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id_user` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_user` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
