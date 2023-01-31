@@ -1,5 +1,5 @@
 <?php
-    include_once "../_header2.php";
+include_once "../_header2.php";
 ?>
 <script src="pdf.js"></script>
 <script src="pdf.worker.js"></script>
@@ -21,8 +21,8 @@
     </div>
     <div class="col-md-4">
         <div class="form-floating">
-        <input type="date" class="form-control" name="tahun" id="floatingInputGrid" placeholder="Tahun" required>
-        <label for="floatingInputGrid">Tahun</label>
+        <input type="date" class="form-control" name="tgl" id="floatingInputGrid" placeholder="Tanggal" required>
+        <label for="floatingInputGrid">Tanggal</label>
     </div>
     </div>
     <div class="col-md-4">
@@ -33,23 +33,29 @@
     </div>
     <div class="col-md-4">
         <div class="form-floating">
+        <input type="text" class="form-control" name="tentang" id="floatingInputGrid" placeholder="Dokumennya Tentang ApaTentang" required>
+        <label for="floatingInputGrid">Tentang</label>
+    </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-floating">
         <input type="text" class="form-control" name="subag" id="floatingInputGrid" placeholder="nomor"  value="<?=($_SESSION['subag'])?>" required readonly>
         <label for="floatingSelectGrid">Sub. Bagian</label>
         </div>
     </div>
-    
+
     <div class="row g-2">
     <div class="col-md-4 mt-4">
         <div class="form-floating">
         <input type="file" id="pdf-file" name="file" accept="application/pdf" required>
     </div>
     </div>
-    
+
     <div class="col-md-1 mt-1">
     <button class="w-100 btn btn-primary btn-xs"  onclick="return confirm('File Sudah Benar ?')" type="submit" name="simpan"><i class="fa fa-check-circle fa-lg" aria-hidden="true"></i>
      </button>
      </div>
-     
+
 </form>
 
 </div>
@@ -61,5 +67,5 @@
 </main>
 
                     <?php
-    include_once "../_footer2.php";
+include_once "../_footer2.php";
 ?>

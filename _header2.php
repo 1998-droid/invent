@@ -1,25 +1,25 @@
 <?php
 include_once "../koneksi.php";
 // session_start();
-// 	if($_SESSION['user']){
-// 		header("location: ../auth");
-// 	}
-// 	if(!isset($_SESSION['user'])){
-// 	   die("<b>Oops!</b> Access Failed.
-// 		   <p>Sistem Logout. Anda harus melakukan Login kembali.</p>
-// 		   <button type='button' onclick=location.href='./'>Back</button>");
+//     if($_SESSION['user']){
+//         header("location: ../auth");
+//     }
+//     if(!isset($_SESSION['user'])){
+//        die("<b>Oops!</b> Access Failed.
+//            <p>Sistem Logout. Anda harus melakukan Login kembali.</p>
+//            <button type='button' onclick=location.href='./'>Back</button>");
 //    }
 //    if($_SESSION['hak_akses']!="kepeg"){
-// 	   die("<b>Oops!</b> Access Failed.
-// 		   <p>Anda Bukan Pegawai.</p>
-// 		   <button type='button' onclick=location.href='./'>Back</button>");}
+//        die("<b>Oops!</b> Access Failed.
+//            <p>Anda Bukan Pegawai.</p>
+//            <button type='button' onclick=location.href='./'>Back</button>");}
 
-           session_start();
- 
-	 //cek apakah yang mengakses halaman ini sudah login
-	if($_SESSION['role']==""){
-		header("location:../auth/login.php?pesan=gagal");
-	}
+session_start();
+
+//cek apakah yang mengakses halaman ini sudah login
+if ($_SESSION['role'] == "") {
+    header("location:../auth/login.php?pesan=gagal");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +45,7 @@ include_once "../koneksi.php";
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                
+
             </form>
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
@@ -70,11 +70,23 @@ include_once "../koneksi.php";
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
-                            <a class="nav-link" href="../kep/data_all.php">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Data Utama
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="../kepeg"><i class="fa-solid fa-file"></i>&nbsp; Data Dila</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp; Data THDSK</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp; Data STR</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link" href="../kepeg/data_all.php">
                                 <div class="sb-nav-link-icon"><i class="fa-sharp fa-solid fa-cloud"></i></div>
                                 Data All
                             </a>
-                            <a class="nav-link" href="../kep">
+                            <a class="nav-link" href="../kepeg">
                                 <div class="sb-nav-link-icon"><i class="fa-sharp fa-solid fa-cloud"></i></div>
                                 Data
                             </a>
