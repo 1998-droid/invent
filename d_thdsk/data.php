@@ -10,7 +10,7 @@ include_once "../_header2.php";
            </ol>
            <div class="card mb-4">
                <div class="card-body">
-               <button onclick="goBack()">Go Back</button>
+
                     <!-- DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the -->
                     <!-- <a target="_blank" href="https://datatables.net/">official DataTables documentation</a> -->
                 </div>
