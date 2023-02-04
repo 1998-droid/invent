@@ -1,5 +1,5 @@
 <?php
-    include_once "../_header.php";
+include_once "../_header.php";
 ?>
 
 <div id="layoutSidenav_content">
@@ -32,38 +32,40 @@
                                     </thead>
                                     <tbody>
                                     <?php
-                                    $sql = mysqli_query($koneksi, "SELECT *, DATE_ADD(tgl_masuk, INTERVAL 5 year) 
-                                    as jatuh_tempo, DATEDIFF(DATE_ADD(tgl_masuk, INTERVAL 5 year), CURRENT_DATE())  FROM tb_izin");
-                                    while($data = mysqli_fetch_array($sql)){
-                                    ?>
-                                    
+$sql = mysqli_query($koneksi, "SELECT * FROM tb_izin");
+while ($data = mysqli_fetch_array($sql)) {
+    $tgl = $data['tgl_masuk'];
+    $umur = new DateTime($tgl);
+    $sekarang = new DateTime();
+    $usia = $sekarang->diff($umur);
+
+    ?>
+
                                         <tr>
                                         <td><?php echo $data['n_ijin']; ?></td>
                                             <td><?php echo $data['tgl_masuk']; ?></td>
-                                            <td><?php echo $data['jatuh_tempo']; ?></td>
-                                            <td><a href="preview.php?id=<?php echo $data['id_izin'];?>" class="btn btn-primary btn-sm" ><i class="fa fa-info fa-fw" aria-hidden="true"></i></a>
-                                            <a href="edit.php?id=<?php echo $data['id_izin'];?>" class="btn btn-info btn-sm" ><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i></a>
-                                            <a href="hps.php?id=<?php echo $data['id_izin'];?>" onclick="return confirm('Yakin Hapus?')" class="btn btn-danger btn-sm" ><i class="fa fa-trash fa-fw" aria-hidden="true"></i></a>
-                                            
-                                            <a href="unduh.php?file=<?php echo $data['file'];?>" class="btn btn-warning btn-sm" ><i class="fa fa-cloud-download fa-fw" aria-hidden="true"></i></a>
+                                            <td><?php echo $usia->y . " " . "Tahun"; ?></td>
+                                            <td><a href="preview.php?id=<?php echo $data['id_izin']; ?>" class="btn btn-primary btn-sm" ><i class="fa fa-info fa-fw" aria-hidden="true"></i></a>
+                                            <a href="edit.php?id=<?php echo $data['id_izin']; ?>" class="btn btn-info btn-sm" ><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i></a>
+                                            <a href="hps.php?id=<?php echo $data['id_izin']; ?>" onclick="return confirm('Yakin Hapus?')" class="btn btn-danger btn-sm" ><i class="fa fa-trash fa-fw" aria-hidden="true"></i></a>
                                             <?php
-                                    }
-                                    ?>
+}
+?>
                                         </td>
                                         </tr>
                                     </tbody>
                                 </table>
-                               
+
                                 <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                     <a class="btn btn-success" href="upload.php"><i class="fa fa-cloud-upload fa-fw" aria-hidden="true"></i></a>
                                 </div>
-                                       
-                            
+
+
                             </div>
                         </div>
                         </div>
                 </main>
-                
+
 <?php
-    include_once "../_footer.php";
+include_once "../_footer.php";
 ?>
