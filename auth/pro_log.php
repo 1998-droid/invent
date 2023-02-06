@@ -60,6 +60,16 @@ if ($cek > 0) {
         header("location:../izin");
 
         // cek jika user login sebagai pengurus
+    } else if ($data['role'] == "peren") {
+        // buat session login dan username
+        $_SESSION['username'] = $data['user'];
+        $_SESSION['role'] = $data['role'];
+        $_SESSION['nama'] = $data['n_user'];
+        $_SESSION['subag'] = $data['subag'];
+        // alihkan ke halaman dashboard pegawai
+        header("location:../peren");
+
+        // cek jika user login sebagai pengurus
     } else {
 
         // alihkan ke halaman login kembali
