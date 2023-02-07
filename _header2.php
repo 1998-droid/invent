@@ -100,12 +100,16 @@ if ($_SESSION['role'] == "") {
                         <div class="collapse" id="semuadata" aria-labelledby="headingOne"
                             data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="../kepeg"><i class="fa-solid fa-file"></i>&nbsp;Data
-                                    Perencanaan</a>
-                                <a class="nav-link" href="../d_thdsk"><i class="fa-solid fa-file"></i>&nbsp;Data
+                                <a class="nav-link" href="../all_data/d_thdsk.php"><i
+                                        class="fa-solid fa-person"></i>&nbsp;
                                     THDSK</a>
-                                <a class="nav-link" href="layout-sidenav-light.html"><i
-                                        class="fa-solid fa-file"></i>&nbsp; Data STR</a>
+                                <a class="nav-link" href="../all_data/kepeg.php"><i
+                                        class="fa-solid fa-building"></i>&nbsp;
+                                    Kepegawaian</a>
+                                <a class="nav-link" href="../all_data/management.php"><i
+                                        class="fa-solid fa-street-view"></i>&nbsp; Managemen</a>
+                                <a class="nav-link" href="../all_data/peren.php"><i
+                                        class="fa-solid fa-ruler"></i>&nbsp;Perencanaan</a>
                             </nav>
                         </div>
 
