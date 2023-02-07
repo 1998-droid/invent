@@ -19,7 +19,4 @@ include_once "../backend/user/manage.php"
             </tr>
         </tbody>
     </table>
-    <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-        <a class="btn btn-success" href="upload.php"><i class="fa fa-cloud-upload fa-fw" aria-hidden="true"></i></a>
-    </div>
 </div>
