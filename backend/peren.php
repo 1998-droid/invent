@@ -12,7 +12,7 @@ while ($data = mysqli_fetch_array($sql)) {
     <td><?php echo $data['subag']; ?></td>
     <td><?php echo $data['file']; ?></td>
     <td><a href="preview.php?id=<?php echo $data['id_peren']; ?>" class="btn btn-primary btn-sm"><i
-                class="fa fa-info fa-fw" aria-hidden="true"></i></a>
+                class="fa-solid fa-circle-info" aria-hidden="true"></i></a>
         <a href="edit.php?id=<?php echo $data['id_peren']; ?>" class="btn btn-info btn-sm"><i
                 class="fa-solid fa-pen-to-square" aria-hidden="true"></i></a>
         <a href="hps.php?id=<?php echo $data['id_peren']; ?>" onclick="return confirm('Yakin Hapus?')"

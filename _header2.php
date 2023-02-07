@@ -83,7 +83,8 @@ if ($_SESSION['role'] == "") {
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
                             data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="../kepeg"><i class="fa-solid fa-file"></i>&nbsp; Data Dila</a>
+                                <a class="nav-link" href="../kepeg"><i class="fa-solid fa-file"></i>&nbsp; Data
+                                    Kepegawaian</a>
                                 <a class="nav-link" href="../d_thdsk"><i class="fa-solid fa-file"></i>&nbsp; Data
                                     THDSK</a>
                                 <a class="nav-link" href="layout-sidenav-light.html"><i
@@ -107,10 +108,7 @@ if ($_SESSION['role'] == "") {
                                         class="fa-solid fa-file"></i>&nbsp; Data STR</a>
                             </nav>
                         </div>
-                        <a class="nav-link" href="../kepeg/data_all.php">
-                            <div class="sb-nav-link-icon"><i class="fa-sharp fa-solid fa-cloud"></i></div>
-                            Data All
-                        </a>
+
                         <!-- <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>

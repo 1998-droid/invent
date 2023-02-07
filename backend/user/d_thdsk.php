@@ -14,6 +14,7 @@ while ($data = mysqli_fetch_array($sql)) {
     <td><?php echo date('d M Y', strtotime($data['tgl_lahir'])); ?></td>
     <td><?php echo $usia->y . " Tahun"; ?></td>
     <td><?php echo $data['file']; ?></td>
+
     <?php
 }
 ?>
