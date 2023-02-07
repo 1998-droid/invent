@@ -2,28 +2,17 @@
     <title>Login V15</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="icon" type="image/png" href="../assets/img/rsud.ico" />
-
     <link rel="stylesheet" type="text/css" href="../assets/login/vendor/bootstrap/css/bootstrap.min.css">
-
     <link rel="stylesheet" type="text/css" href="../assets/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-
     <link rel="stylesheet" type="text/css" href="../assets/login/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-
     <link rel="stylesheet" type="text/css" href="../assets/login/vendor/animate/animate.css">
-
     <link rel="stylesheet" type="text/css" href="../assets/login/vendor/css-hamburgers/hamburgers.min.css">
-
     <link rel="stylesheet" type="text/css" href="../assets/login/vendor/animsition/css/animsition.min.css">
-
     <link rel="stylesheet" type="text/css" href="../assets/login/vendor/select2/select2.min.css">
-
     <link rel="stylesheet" type="text/css" href="../assets/login/vendor/daterangepicker/daterangepicker.css">
-
     <link rel="stylesheet" type="text/css" href="../assets/login/css/util.css">
     <link rel="stylesheet" type="text/css" href="../assets/login/css/main.css">
-
     <meta name="robots" content="noindex, follow">
     <script nonce="891ce73c-f463-4a3d-b119-0e59b40c7bc7">
     (function(w, d) {
@@ -101,28 +90,19 @@
             </div>
         </div>
     </div>
-
-
 </body>
 
 </html>
 <script src="../assets/js/scripts.js"></script>
 <script src="../asset/login/vendor/jquery/jquery-3.2.1.min.js"></script>
-
 <script src="asset/login/vendor/animsition/js/animsition.min.js"></script>
-
 <script src="asset/login/vendor/bootstrap/js/popper.js"></script>
 <script src="asset/login/vendor/bootstrap/js/bootstrap.min.js"></script>
-
 <script src="asset/login/vendor/select2/select2.min.js"></script>
-
 <script src="asset/login/vendor/daterangepicker/moment.min.js"></script>
 <script src="asset/login/vendor/daterangepicker/daterangepicker.js"></script>
-
 <script src="asset/login/vendor/countdowntime/countdowntime.js"></script>
-
 <script src="asset/login/js/main.js"></script>
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -131,7 +111,6 @@ function gtag() {
     dataLayer.push(arguments);
 }
 gtag('js', new Date());
-
 gtag('config', 'UA-23581568-13');
 </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"

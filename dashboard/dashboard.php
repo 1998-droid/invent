@@ -1,5 +1,5 @@
 <?php
-    include_once "../_header.php";
+include_once "../_header.php";
 ?>
 
 
@@ -7,11 +7,11 @@
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid px-4">
-<h1 class="mt-4">Dashboard</h1>
-<hr>
-</div>
-</main>
+            <h1 class="mt-4">Dashboard</h1>
+            <hr>
+        </div>
+    </main>
 
-<?php
-    include_once "../_footer.php";
+    <?php
+include_once "../_footer.php";
 ?>
