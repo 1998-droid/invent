@@ -21,11 +21,39 @@ include_once "../_header2.php";
                     DataTable Example
                 </div>
                 <div class="card-body">
-                    <?php include_once "data/kepeg.php";?>
+                    <!-- <?php include_once "data/peren.php";?> -->
                 </div>
             </div>
     </main>
+    <script>
+    $(function() {
+
+        $('.table').DataTable({
+            "processing": true,
+            "serverSide": true,
+            "ajax": {
+                "url": "ajax/ajax_kontak.php?action=table_data",
+                "dataType": "json",
+                "type": "POST"
+            },
+            "columns": [{
+                    "data": "no"
+                },
+                {
+                    "data": "nama"
+                },
+                {
+                    "data": "no_hp"
+                },
+                {
+                    "data": "aksi"
+                },
+            ]
+
+        });
+    });
+    </script>
 
     <?php
-include_once "../_footer2.php";
+include_once "../_footer3.php";
 ?>
