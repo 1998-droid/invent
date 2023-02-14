@@ -9,20 +9,23 @@ include_once "../_header2.php";
 
                 <?php
 $id = mysqli_real_escape_string($koneksi, $_GET['id']);
-$query = mysqli_query($koneksi, "SELECT a.id_thdsk, a.nama, a.nik, a.file FROM tb_dok a
+$query = mysqli_query($koneksi, "SELECT a.id_thdsk, a.nama, a.nik, a.file FROM tb_thdsk a
     WHERE id_thdsk='$id' ");
 $data = mysqli_fetch_array($query);
 
 ?>
-
-                <h1>Judul Document: <?php echo $data['n_dok']; ?></h1>
+                <h1>Judul Document: <?php echo $data['nama']; ?></h1>
                 <hr>
-                <b>Nama:</b> <?php echo $data['n_dok']; ?>| | <a href="javascript:history.go(-1)"><B>KEMBALI</B></a>
-                <b>Nomor:</b> <?php echo $data['subag']; ?>
+                <b>Nama:</b> <?php echo $data['nama']; ?>| | <a href="javascript:history.go(-1)"><B>KEMBALI</B></a>
                 <hr>
-
-                <embed src="file/<?php echo $data['file']; ?>" type="application/pdf" width="1000" height="600">
-
+                <div class="box">
+                    <div class="container-fluid px-7">
+                        <div class="col-lg-12">
+                            <embed src="file/<?php echo $data['file']; ?>" type="application/pdf" width="1500"
+                                height="800">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
