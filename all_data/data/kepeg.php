@@ -14,8 +14,6 @@
             <?php
 include_once "../backend/user/kepeg.php"
 ?>
-            </td>
-            </tr>
         </tbody>
     </table>
 </div>

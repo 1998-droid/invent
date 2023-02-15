@@ -91,6 +91,21 @@ if ($_SESSION['role'] == "") {
                                         class="fa-solid fa-file"></i>&nbsp; Data STR</a>
                             </nav>
                         </div>
+
+                        <div class="sb-sidenav-menu-heading">Interface</div>
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#rule"
+                            aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                            Peraturan RS
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="rule" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="../rules"><i class="fa fa-book fa-fw"></i>&nbsp; Perdir</a>
+                                <a class="nav-link" href="layout-sidenav-light.html"><i
+                                        class="fa fa-book fa-fw"></i>&nbsp; Perbup</a>
+                            </nav>
+                        </div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#semuadata"
                             aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>

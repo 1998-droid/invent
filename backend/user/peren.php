@@ -10,6 +10,10 @@ while ($data = mysqli_fetch_array($sql)) {
     <td><?php echo $data['tentang']; ?></td>
     <td><?php echo $data['subag']; ?></td>
     <td><?php echo $data['file']; ?></td>
+    <td><a href="../peren/unduh.php?file=<?php echo $data['file']; ?>" class="btn btn-warning btn-sm"
+            data-toggle="tooltip" data-placement="top" title="Unduh"><i class="fa fa-cloud-download fa-fw"
+                aria-hidden="true"></i></a>
+    </td>
 </tr>
 <?php
 }
