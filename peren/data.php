@@ -1,5 +1,5 @@
 <?php
-include_once "../_header/peren.php";
+include_once "../_header/kepeg.php";
 ?>
 
 <div id="layoutSidenav_content">
@@ -27,5 +27,5 @@ include_once "../_header/peren.php";
     </main>
 
     <?php
-include_once "../_header/peren.php";
+include_once "../_footer/_footer2.php";
 ?>
