@@ -25,6 +25,25 @@ if ($_SESSION["role"] == "kepeg") {?>
                         STR</a>
                 </nav>
             </div>
+            <div class="sb-sidenav-menu-heading">Interface</div>
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#semuadata"
+                aria-expanded="false" aria-controls="collapseLayouts">
+                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                Semua Data
+                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="semuadata" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                <nav class="sb-sidenav-menu-nested nav">
+                    <a class="nav-link" href="../all_data/d_thdsk.php"><i class="fa-solid fa-person"></i>&nbsp;
+                        THDSK</a>
+                    <a class="nav-link" href="../all_data/kepeg.php"><i class="fa-solid fa-building"></i>&nbsp;
+                        Kepegawaian</a>
+                    <a class="nav-link" href="../all_data/management.php"><i class="fa-solid fa-street-view"></i>&nbsp;
+                        Managemen</a>
+                    <a class="nav-link" href="../all_data/peren.php"><i
+                            class="fa-solid fa-ruler"></i>&nbsp;Perencanaan</a>
+                </nav>
+            </div>
             <?php } elseif ($_SESSION["role"] == "peren") {?>
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts"
                 aria-expanded="false" aria-controls="collapseLayouts">
@@ -38,7 +57,7 @@ if ($_SESSION["role"] == "kepeg") {?>
                         Perencanaan</a>
                 </nav>
             </div>
-            <?php }?>
+
             <div class="sb-sidenav-menu-heading">Interface</div>
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#rule"
                 aria-expanded="false" aria-controls="collapseLayouts">
@@ -48,7 +67,7 @@ if ($_SESSION["role"] == "kepeg") {?>
             </a>
             <div class="collapse" id="rule" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="../rules"><i class="fa fa-book fa-fw"></i>&nbsp; Perdir</a>
+                    <a class="nav-link" href="../all_data/rule.php"><i class="fa fa-book fa-fw"></i>&nbsp; Perdir</a>
                     <a class="nav-link" href="layout-sidenav-light.html"><i class="fa fa-book fa-fw"></i>&nbsp;
                         Perbup</a>
                 </nav>
@@ -71,7 +90,14 @@ if ($_SESSION["role"] == "kepeg") {?>
                             class="fa-solid fa-ruler"></i>&nbsp;Perencanaan</a>
                 </nav>
             </div>
-
+            <?php } elseif ($_SESSION["role"] == "user") {?>
+            <div class="collapse" id="semuadata" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                <nav class="sb-sidenav-menu-nested nav">
+                    <a class="nav-link" href="../all_data/d_thdsk.php"><i class="fa-solid fa-person"></i>&nbsp;
+                        THDSK</a>
+                </nav>
+            </div>
+            <?php }?>
             <!-- <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>

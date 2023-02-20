@@ -5,7 +5,7 @@ include_once "../_header/kepeg.php";
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid px-4">
-            <h1 class="mt-4">Table THDSK</h1>
+            <h1 class="mt-4">Table Aturan RSUD</h1>
             <ol class="breadcrumb mb-4">
             </ol>
             <div class="card mb-4">
@@ -21,7 +21,7 @@ include_once "../_header/kepeg.php";
                     DataTable Example
                 </div>
                 <div class="card-body">
-                    <?php include_once "data_table.php";?>
+                    <?php include_once "data/rule.php";?>
                 </div>
             </div>
     </main>

@@ -70,6 +70,16 @@ if ($cek > 0) {
         header("location:../peren");
 
         // cek jika user login sebagai pengurus
+    } else if ($data['role'] == "user") {
+        // buat session login dan username
+        $_SESSION['username'] = $data['user'];
+        $_SESSION['role'] = $data['role'];
+        $_SESSION['nama'] = $data['n_user'];
+        $_SESSION['subag'] = $data['subag'];
+        // alihkan ke halaman dashboard pegawai
+        header("location:../all_data/d_thdsk.php");
+
+        // cek jika user login sebagai pengurus
     } else {
 
         // alihkan ke halaman login kembali

@@ -1,5 +1,5 @@
 <?php
-$sql = mysqli_query($koneksi, "SELECT a.id_aturan, a.n_dok, a.subag, a.tahun, a.file FROM tb_aturan a JOIN tb_user b ON a.subag=b.subag WHERE user='$_SESSION[username]' ")
+$sql = mysqli_query($koneksi, "SELECT * FROM tb_aturan")
 or die(mysqli_error($koneksi));
 while ($data = mysqli_fetch_array($sql)) {
     ?>

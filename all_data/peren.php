@@ -1,11 +1,11 @@
 <?php
-include_once "../_header2.php";
+include_once "../_header/kepeg.php";
 ?>
 
 <div id="layoutSidenav_content">
     <main>
         <div class="container-fluid px-4">
-            <h1 class="mt-4">Table THDSK</h1>
+            <h1 class="mt-4">Table Perencanaan</h1>
             <ol class="breadcrumb mb-4">
             </ol>
             <div class="card mb-4">
@@ -21,11 +21,11 @@ include_once "../_header2.php";
                     DataTable Example
                 </div>
                 <div class="card-body">
-                    <?php include_once "data_table.php";?>
+                    <?php include_once "data/peren.php";?>
                 </div>
             </div>
     </main>
 
     <?php
-include_once "../_footer2.php";
+include_once "../_footer/_footer2.php";
 ?>
