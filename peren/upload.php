@@ -1,5 +1,5 @@
 <?php
-include_once "../_header2.php";
+include_once "../_header/kepeg.php";
 ?>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript">
@@ -73,8 +73,8 @@ function PreviewImage() {
                                         </div>
 
                                         <div style="clear:both">
-                                            <iframe id="viewer" frameborder="0" scrolling="no" width="600"
-                                                height="600"></iframe>
+                                            <iframe id="viewer" frameborder="0" scrolling="no" width="450"
+                                                height="450"></iframe>
                                         </div>
                                     </div>
 
@@ -89,5 +89,5 @@ function PreviewImage() {
     </main>
 
     <?php
-include_once "../_footer2.php";
+include_once "../_footer/_footer2.php";
 ?>

@@ -9,7 +9,7 @@
     </thead>
     <tbody>
         <?php
-include_once "../backend/rules.php";
+include_once "../backend/rule.php";
 ?>
         </td>
         </tr>

@@ -1,5 +1,5 @@
 <?php
-include_once "../_header2.php";
+include_once "../_header/kepeg.php";
 
 ?>
 <div id="layoutSidenav_content">
@@ -26,5 +26,5 @@ $data = mysqli_fetch_array($query);
     </main>
 
     <?php
-include_once "../_footer2.php";
+include_once "../_footer/_footer2.php";
 ?>
