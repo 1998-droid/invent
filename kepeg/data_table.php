@@ -6,6 +6,7 @@
                 <th>Tanggal</th>
                 <th>Nomor</th>
                 <th>Tentang</th>
+                <th>Jenis Surat</th>
                 <th>Subag</th>
                 <th>File</th>
                 <th>Aksi</th>
