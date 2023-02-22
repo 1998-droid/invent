@@ -53,6 +53,13 @@ function PreviewImage() {
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-floating">
+                                            <input type="text" class="form-control" name="type_doc"
+                                                id="floatingInputGrid" placeholder="Jenis surat (sk, sp)" required>
+                                            <label for="floatingInputGrid">Jenis surat (sk, sp)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-floating">
                                             <input type="text" class="form-control" name="subag" id="floatingInputGrid"
                                                 placeholder="nomor" value="<?=($_SESSION['subag'])?>" required readonly>
                                             <label for="floatingSelectGrid">Sub. Bagian</label>

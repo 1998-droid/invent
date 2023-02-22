@@ -7,10 +7,11 @@ if (isset($_POST['simpan'])) {
         $tgl = trim($_POST['tgl']);
         $nomor = trim($_POST['nomor']);
         $tentang = trim($_POST['tentang']);
+        $type_doc = trim($_POST['type_doc']);
         $subag = trim($_POST['subag']);
         $file = trim($_FILES['file']['name']);
 
-        $sql = "INSERT INTO tb_dok  (n_dok, tgl, nomor, tentang, subag) VALUES ('$nama', '$tgl', '$nomor', '$tentang', '$subag')";
+        $sql = "INSERT INTO tb_dok  (n_dok, tgl, nomor, tentang, type_doc, subag) VALUES ('$nama', '$tgl', '$nomor', '$tentang', '$type_doc', '$subag')";
         mysqli_query($koneksi, $sql); //simpan data judul dahulu untuk mendapatkan id
 
         //dapatkan id terkahir

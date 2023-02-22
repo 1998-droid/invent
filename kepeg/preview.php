@@ -9,7 +9,7 @@ include_once "../_header/kepeg.php";
 
                 <?php
 $id = mysqli_real_escape_string($koneksi, $_GET['id']);
-$query = mysqli_query($koneksi, "SELECT a.id_dok,a.n_dok, a.subag, a.file FROM tb_dok a
+$query = mysqli_query($koneksi, "SELECT a.id_dok,a.n_dok, a.subag, a.file, a.type_doc FROM tb_dok a
     WHERE id_dok='$id' ");
 $data = mysqli_fetch_array($query);
 
@@ -19,6 +19,7 @@ $data = mysqli_fetch_array($query);
                 <hr>
                 <b>Nama:</b> <?php echo $data['n_dok']; ?>| | <a href="javascript:history.go(-1)"><B>KEMBALI</B></a>
                 <b>Nomor:</b> <?php echo $data['subag']; ?>
+                <b>Jenis Dokumen:</b> <?php echo $data['type_doc']; ?>
                 <hr>
 
                 <embed src="file/<?php echo $data['file']; ?>" type="application/pdf" width="1000" height="600">

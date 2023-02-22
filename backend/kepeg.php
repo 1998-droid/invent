@@ -1,6 +1,6 @@
 <?php
 $sql = mysqli_query($koneksi, "SELECT a.id_dok, a.n_dok, a.subag, a.file, a.tgl,
-a.tentang, a.nomor FROM tb_dok a JOIN tb_user b ON a.subag=b.subag WHERE user='$_SESSION[username]' ")
+a.tentang, a.nomor, a.type_doc FROM tb_dok a JOIN tb_user b ON a.subag=b.subag WHERE user='$_SESSION[username]' ")
 or die(mysqli_error($koneksi));
 while ($data = mysqli_fetch_array($sql)) {
     ?>
@@ -10,6 +10,7 @@ while ($data = mysqli_fetch_array($sql)) {
     <td><?php echo $data['tgl']; ?></td>
     <td><?php echo $data['nomor']; ?></td>
     <td><?php echo $data['tentang']; ?></td>
+    <td><?php echo $data['type_doc']; ?></td>
     <td><?php echo $data['subag']; ?></td>
     <td><?php echo $data['file']; ?></td>
     <td><a href="preview.php?id=<?php echo $data['id_dok']; ?>" class="btn btn-primary btn-sm" data-toggle="tooltip"
