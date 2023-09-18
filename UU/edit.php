@@ -16,8 +16,8 @@ include_once "../_header2.php";
                             <form action="pro.php" method="post" enctype="multipart/form-data">
                                 <?php
 $id = mysqli_real_escape_string($koneksi, $_GET['id']);
-$query = mysqli_query($koneksi, "SELECT * , file FROM tb_dok
-        WHERE id_dok='$id' ");
+$query = mysqli_query($koneksi, "SELECT * , file FROM uu
+        WHERE id_uu='$id' ");
 $data = mysqli_fetch_array($query);
 ?>
                                 <div class="row g-2">
