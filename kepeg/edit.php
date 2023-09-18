@@ -1,5 +1,5 @@
 <?php
-    include_once "../_header2.php";
+include_once "../_header2.php";
 ?>
 <script src="pdf.js"></script>
 <script src="pdf.worker.js"></script>
@@ -15,11 +15,11 @@
                         <div class="card-body">
                             <form action="pro.php" method="post" enctype="multipart/form-data">
                                 <?php
-        $id    = mysqli_real_escape_string($koneksi,$_GET['id']);
-        $query = mysqli_query($koneksi,"SELECT * , file FROM tb_dok
+$id = mysqli_real_escape_string($koneksi, $_GET['id']);
+$query = mysqli_query($koneksi, "SELECT * , file FROM tb_dok
         WHERE id_dok='$id' ");
-        $data  = mysqli_fetch_array($query);
-    ?>
+$data = mysqli_fetch_array($query);
+?>
                                 <div class="row g-2">
                                     <div class="col-md-4">
                                         <div class="form-floating">
@@ -46,7 +46,7 @@
                                         <div class="row g-2">
                                             <div class="col-md-4 mt-4">
                                                 <div class="form-floating">
-                                                    <embed src="file/<?php echo $data['file'];?>" name="id_2"
+                                                    <embed src="file/<?php echo $data['file']; ?>" name="id_2"
                                                         type="application/pdf" width="250" height="250">
                                                 </div>
                                             </div>
@@ -58,7 +58,6 @@
                                                         aria-hidden="true"></i>
                                                 </button>
                                             </div>
-
                             </form>
 
                         </div>
@@ -70,5 +69,5 @@
     </main>
 
     <?php
-    include_once "../_footer2.php";
+include_once "../_footer2.php";
 ?>
