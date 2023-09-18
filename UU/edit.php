@@ -1,5 +1,5 @@
 <?php
-include_once "../_header2.php";
+include_once "../_header/kepeg.php";
 ?>
 <script src="pdf.js"></script>
 <script src="pdf.worker.js"></script>
@@ -16,16 +16,23 @@ include_once "../_header2.php";
                             <form action="pro.php" method="post" enctype="multipart/form-data">
                                 <?php
 $id = mysqli_real_escape_string($koneksi, $_GET['id']);
-$query = mysqli_query($koneksi, "SELECT * , file FROM uu
+$query = mysqli_query($koneksi, "SELECT * FROM uu
         WHERE id_uu='$id' ");
 $data = mysqli_fetch_array($query);
 ?>
                                 <div class="row g-2">
                                     <div class="col-md-4">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" name="n_dok" id="floatingInputGrid"
-                                                value="<?=($data['subag'])?>" placeholder="nama" required>
+                                            <input type="text" class="form-control" name="nama" id="floatingInputGrid"
+                                                value="<?=($data['nama'])?>" placeholder="nama" required readonly>
                                             <label for="floatingInputGrid">nama</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" name="tahun" id="floatingInputGrid"
+                                                value="<?=($data['tahun'])?>" placeholder="Tahun" required>
+                                            <label for="floatingInputGrid">Tahun</label>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -69,5 +76,5 @@ $data = mysqli_fetch_array($query);
     </main>
 
     <?php
-include_once "../_footer2.php";
+include_once "../_footer/_footer2.php";
 ?>
