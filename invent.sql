@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 19 Sep 2023 pada 05.57
+-- Waktu pembuatan: 19 Sep 2023 pada 09.04
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 8.1.6
 
@@ -35,6 +35,13 @@ CREATE TABLE `tb_aturan` (
   `subag` varchar(30) NOT NULL,
   `file` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tb_aturan`
+--
+
+INSERT INTO `tb_aturan` (`id_aturan`, `n_dok`, `tahun`, `tentang`, `subag`, `file`) VALUES
+(12, 'wwww', '2023-09-14', 'erwerwer', 'Manajemen', 'Manajemen_wwww.pdf');
 
 -- --------------------------------------------------------
 
@@ -69,6 +76,43 @@ CREATE TABLE `tb_izin` (
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `tb_perbup`
+--
+
+CREATE TABLE `tb_perbup` (
+  `id_perbup` int(255) NOT NULL,
+  `nama` varchar(30) NOT NULL,
+  `tahun` date NOT NULL,
+  `subag` varchar(30) NOT NULL,
+  `file` varchar(50) NOT NULL,
+  `tgl_upload` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_perda`
+--
+
+CREATE TABLE `tb_perda` (
+  `id_perda` int(255) NOT NULL,
+  `nama` varchar(30) NOT NULL,
+  `tahun` date NOT NULL,
+  `subag` varchar(30) NOT NULL,
+  `file` varchar(50) NOT NULL,
+  `tgl_upload` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tb_perda`
+--
+
+INSERT INTO `tb_perda` (`id_perda`, `nama`, `tahun`, `subag`, `file`, `tgl_upload`) VALUES
+(2, 'angarran', '2023-09-14', 'Kepegawaian', 'angarran_2023-09-19.pdf', '2023-09-19 06:27:54');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `tb_peren`
 --
 
@@ -88,6 +132,28 @@ CREATE TABLE `tb_peren` (
 INSERT INTO `tb_peren` (`id_peren`, `n_dok`, `tahun`, `tentang`, `subag`, `file`) VALUES
 (1, 'Tio Ramdani', '2023-03-03', 'hukuman jasa pelayanan', 'Perencanaan', 'Tio Ramdani.pdf'),
 (2, 'Tio ahmad', '2022-02-21', 'hukuman jasa pelayanan', 'Perencanaan', 'Tio ahmad.pdf');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_permen`
+--
+
+CREATE TABLE `tb_permen` (
+  `id_permen` int(255) NOT NULL,
+  `nama` varchar(30) NOT NULL,
+  `tahun` date NOT NULL,
+  `subag` varchar(30) NOT NULL,
+  `file` varchar(50) NOT NULL,
+  `tgl_upload` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tb_permen`
+--
+
+INSERT INTO `tb_permen` (`id_permen`, `nama`, `tahun`, `subag`, `file`, `tgl_upload`) VALUES
+(1, 'angarran', '2023-09-06', 'Kepegawaian', 'angarran_2023-09-19.pdf', '2023-09-19 06:38:57');
 
 -- --------------------------------------------------------
 
@@ -177,7 +243,8 @@ CREATE TABLE `uu` (
 --
 
 INSERT INTO `uu` (`id_uu`, `nama`, `tahun`, `subag`, `file`, `tgl_upload`) VALUES
-(13, '18-09-2023-angarran', '2021-01-18', 'Kepegawaian', 'angarran_2023-09-18.pdf', '2023-09-18 06:22:08');
+(19, '19-09-2023-angarran', '2022-01-04', 'Kepegawaian', 'angarran_2023-09-19.pdf', '2023-09-19 04:40:35'),
+(20, 'Sample', '2023-09-04', 'kepeg', 'Sample.pdf', '2023-09-19 04:41:32');
 
 --
 -- Indexes for dumped tables
@@ -202,10 +269,28 @@ ALTER TABLE `tb_izin`
   ADD PRIMARY KEY (`id_izin`);
 
 --
+-- Indeks untuk tabel `tb_perbup`
+--
+ALTER TABLE `tb_perbup`
+  ADD PRIMARY KEY (`id_perbup`);
+
+--
+-- Indeks untuk tabel `tb_perda`
+--
+ALTER TABLE `tb_perda`
+  ADD PRIMARY KEY (`id_perda`);
+
+--
 -- Indeks untuk tabel `tb_peren`
 --
 ALTER TABLE `tb_peren`
   ADD PRIMARY KEY (`id_peren`);
+
+--
+-- Indeks untuk tabel `tb_permen`
+--
+ALTER TABLE `tb_permen`
+  ADD PRIMARY KEY (`id_permen`);
 
 --
 -- Indeks untuk tabel `tb_ruang`
@@ -239,7 +324,7 @@ ALTER TABLE `uu`
 -- AUTO_INCREMENT untuk tabel `tb_aturan`
 --
 ALTER TABLE `tb_aturan`
-  MODIFY `id_aturan` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_aturan` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_dok`
@@ -254,10 +339,28 @@ ALTER TABLE `tb_izin`
   MODIFY `id_izin` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT untuk tabel `tb_perbup`
+--
+ALTER TABLE `tb_perbup`
+  MODIFY `id_perbup` int(255) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `tb_perda`
+--
+ALTER TABLE `tb_perda`
+  MODIFY `id_perda` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT untuk tabel `tb_peren`
 --
 ALTER TABLE `tb_peren`
   MODIFY `id_peren` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT untuk tabel `tb_permen`
+--
+ALTER TABLE `tb_permen`
+  MODIFY `id_permen` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_ruang`
@@ -281,7 +384,7 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT untuk tabel `uu`
 --
 ALTER TABLE `uu`
-  MODIFY `id_uu` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_uu` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
