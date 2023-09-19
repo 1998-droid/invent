@@ -23,11 +23,11 @@ if ($_SESSION["role"] == "kepeg") {?>
                         THDSK</a>
                     <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp; Data
                         STR</a>
-                    <a class="nav-link" href="../UU"><i class="fa-solid fa-file"></i>&nbsp; Data
+                    <a class="nav-link" href="../UU"><i class="fa-solid fa-file"></i>&nbsp;Data
                         UU</a>
-                    <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp; Data
+                    <a class="nav-link" href="../Perda"><i class="fa-solid fa-file"></i>&nbsp;Data
                         Perda</a>
-                    <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp; Data
+                    <a class="nav-link" href="../Permen"><i class="fa-solid fa-file"></i>&nbsp; Data
                         Permen</a>
                     <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp; Data
                         Perbup</a>

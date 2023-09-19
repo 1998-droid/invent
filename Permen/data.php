@@ -23,7 +23,7 @@ include_once "../_header/kepeg.php";
 
                     <!-- backend -->
                     <?php
-include_once "../backend/perda/database.php";
+include_once "../backend/permen/database.php";
 ?>
                 </div>
             </div>
