@@ -9,8 +9,8 @@ include_once "../_header/kepeg.php";
 
                 <?php
 $id = mysqli_real_escape_string($koneksi, $_GET['id']);
-$query = mysqli_query($koneksi, "SELECT a.id_permen , a.nama, a.tahun, a.tgl_upload, a.subag, a.file FROM tb_permen a
-    WHERE id_permen='$id' ");
+$query = mysqli_query($koneksi, "SELECT a.id_perbup , a.nama, a.tahun, a.tgl_upload, a.subag, a.file FROM tb_perbup a
+    WHERE id_perbup='$id' ");
 $data = mysqli_fetch_array($query);
 
 ?>

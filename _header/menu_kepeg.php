@@ -1,4 +1,4 @@
-<nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+<nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
     <div class="sb-sidenav-menu">
         <div class="nav">
             <div class="sb-sidenav-menu-heading">Core</div>
@@ -29,7 +29,7 @@ if ($_SESSION["role"] == "kepeg") {?>
                         Perda</a>
                     <a class="nav-link" href="../Permen"><i class="fa-solid fa-file"></i>&nbsp; Data
                         Permen</a>
-                    <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp; Data
+                    <a class="nav-link" href="../Perbup"><i class="fa-solid fa-file"></i>&nbsp; Data
                         Perbup</a>
                     <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp; Data
                         Per RS</a>
