@@ -23,6 +23,7 @@ $data = mysqli_fetch_array($query);
                                 <div class="row g-2">
                                     <div class="col-md-4">
                                         <div class="form-floating">
+                                            <input type="hidden" name="id" value="<?=($data['id_uu'])?>">
                                             <input type="text" class="form-control" name="nama" id="floatingInputGrid"
                                                 value="<?=($data['nama'])?>" placeholder="nama" required readonly>
                                             <label for="floatingInputGrid">nama</label>
@@ -30,7 +31,7 @@ $data = mysqli_fetch_array($query);
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" name="tahun" id="floatingInputGrid"
+                                            <input type="date" class="form-control" name="tahun" id="floatingInputGrid"
                                                 value="<?=($data['tahun'])?>" placeholder="Tahun" required>
                                             <label for="floatingInputGrid">Tahun</label>
                                         </div>
@@ -46,8 +47,8 @@ $data = mysqli_fetch_array($query);
                                     <div class="row g-2">
                                         <div class="col-md-4 mt-4">
                                             <div class="form-floating">
-                                                <input type="file" id="pdf-file" name="file" accept="application/pdf"
-                                                    required>
+                                                <input type="file" id="pdf-file" value="<?php echo $data['file']; ?>"
+                                                    name="file" accept="application/pdf">
                                             </div>
                                         </div>
                                         <div class="row g-2">
@@ -61,7 +62,7 @@ $data = mysqli_fetch_array($query);
                                             <div class="col-md-1 mt-1">
                                                 <button class="w-100 btn btn-primary btn-xs"
                                                     onclick="return confirm('File sudah benar ?')" type="submit"
-                                                    name="simpan"><i class="fa fa-check-circle fa-lg"
+                                                    name="edit"><i class="fa fa-check-circle fa-lg"
                                                         aria-hidden="true"></i>
                                                 </button>
                                             </div>
