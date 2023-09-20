@@ -51,8 +51,8 @@ if ($_SESSION["role"] == "kepeg") {?>
                         Perdir</a>
                     <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp;Data
                         Perizinan</a>
-                    <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp;Data
-                        Sertif Pegawai</a>
+                    <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp;Sertif
+                        Pegawai</a>
                     <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp;Data
                         Sertif RS</a>
                 </nav>
