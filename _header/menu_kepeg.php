@@ -17,6 +17,20 @@ if ($_SESSION["role"] == "kepeg") {?>
             </a>
             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
+                    <a class="nav-link" href="../kepeg"><i class="fa-solid fa-file"></i>&nbsp;Data
+                    </a>
+
+                </nav>
+            </div>
+            <!-- data sub kategori -->
+            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts1"
+                aria-expanded="false" aria-controls="collapseLayouts">
+                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                Data Per Kategori
+                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="collapseLayouts1" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                <nav class="sb-sidenav-menu-nested nav">
                     <a class="nav-link" href="../kepeg"><i class="fa-solid fa-file"></i>&nbsp; Data
                         Kepegawaian</a>
                     <a class="nav-link" href="../d_thdsk"><i class="fa-solid fa-file"></i>&nbsp; Data
@@ -31,15 +45,15 @@ if ($_SESSION["role"] == "kepeg") {?>
                         Permen</a>
                     <a class="nav-link" href="../Perbup"><i class="fa-solid fa-file"></i>&nbsp; Data
                         Perbup</a>
-                    <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp; Data
+                    <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp;Data
                         Per RS</a>
-                    <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp; Data
+                    <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp;Data
                         Perdir</a>
-                    <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp; Data
+                    <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp;Data
                         Perizinan</a>
-                    <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp; Data
+                    <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp;Data
                         Sertif Pegawai</a>
-                    <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp; Data
+                    <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp;Data
                         Sertif RS</a>
                 </nav>
             </div>

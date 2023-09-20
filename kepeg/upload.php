@@ -24,38 +24,16 @@ function PreviewImage() {
                                 <div class="row g-2">
                                     <div class="col-md-4">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" name="n_dok" id="floatingInputGrid"
+                                            <input type="text" class="form-control" name="nama" id="floatingInputGrid"
                                                 placeholder="Nama Dokumen" required>
                                             <label for="floatingInputGrid">Nama Dokumen</label>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-floating">
-                                            <input type="date" class="form-control" name="tgl" id="floatingInputGrid"
-                                                placeholder="Tanggal" required>
-                                            <label for="floatingInputGrid">Tanggal</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-floating">
-                                            <input type="number" class="form-control" name="nomor"
-                                                id="floatingInputGrid" placeholder="Nomor Dokumen" required>
-                                            <label for="floatingInputGrid">Nomor Dokumen</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" name="tentang"
-                                                id="floatingInputGrid" placeholder="Dokumennya Tentang ApaTentang"
-                                                required>
-                                            <label for="floatingInputGrid">Tentang</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" name="type_doc"
-                                                id="floatingInputGrid" placeholder="Jenis surat (sk, sp)" required>
-                                            <label for="floatingInputGrid">Jenis surat (sk, sp)</label>
+                                            <input type="date" class="form-control" name="tahun" id="floatingInputGrid"
+                                                placeholder="Tahun" required>
+                                            <label for="floatingInputGrid">Tahun</label>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -65,6 +43,19 @@ function PreviewImage() {
                                             <label for="floatingSelectGrid">Sub. Bagian</label>
                                         </div>
                                     </div>
+                                    <div class="col-md-4">
+                                        <div class="form-floating">
+                                            <select id="inputState" class="form-select" name="jenis_dok" readonly>
+                                                <option value="uu">Undang-undang</option>
+                                                <option value="perda">Peraturan Daerah</option>
+                                                <option value="permen">Peraturan Menteri</option>
+                                                <option value="perbup">Peraturan Bupati</option>
+                                                <option value="perrs">Peraturan Rumah Sakit</option>
+                                            </select>
+                                            <label for="floatingInputGrid">Jenis surat</label>
+                                        </div>
+                                    </div>
+
 
                                     <div class="row g-2">
                                         <div class="col-md-4 mt-4">

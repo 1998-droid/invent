@@ -21,7 +21,7 @@ include_once "../_header/kepeg.php";
                 </div>
                 <div class="card-body">
                     <?php
-include_once "data_table.php";
+include_once "../backend/kepegawaian/database.php";
 ?>
                 </div>
             </div>

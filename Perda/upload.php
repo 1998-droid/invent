@@ -44,6 +44,15 @@ function PreviewImage() {
                                             <label for="floatingSelectGrid">Sub. Bagian</label>
                                         </div>
                                     </div>
+                                    <div class="col-md-4">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" name="jenis_dok"
+                                                id="floatingInputGrid" placeholder="nomor" value="perda" required
+                                                readonly>
+                                            </input>
+                                            <label for="floatingSelectGrid">Peraturan Daerah</label>
+                                        </div>
+                                    </div>
 
                                     <div class="row g-2">
                                         <div class="col-md-4 mt-4">
