@@ -52,7 +52,7 @@ function PreviewImage() {
                                                 <option value="perbup">Peraturan Bupati</option>
                                                 <option value="perrs">Peraturan Rumah Sakit</option>
                                             </select>
-                                            <label for="floatingInputGrid">Jenis surat</label>
+                                            <label for="floatingInputGrid">Jenis Dokumen</label>
                                         </div>
                                     </div>
 
