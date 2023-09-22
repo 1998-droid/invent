@@ -14,11 +14,11 @@ if (isset($_POST['simpan'])) {
         mysqli_query($koneksi, $sql); //simpan data judul dahulu untuk mendapatkan id
 
         //dapatkan id terkahir
-        $query = mysqli_query($koneksi, "SELECT nama, tgl_upload FROM tb_dok  ORDER BY id_dok DESC LIMIT 1");
+        $query = mysqli_query($koneksi, "SELECT nama, tahun FROM tb_dok  ORDER BY id_dok DESC LIMIT 1");
         $data = mysqli_fetch_array($query);
 
         //mengganti nama pdf
-        $nama_baru = date('Y-m-d', strtotime($data['tgl_upload'])) . "_" . $data['nama'] . ".pdf"; //hasil contoh: file_1.pdf
+        $nama_baru = date('Y-m-d', strtotime($data['tahun'])) . "_" . $data['nama'] . ".pdf"; //hasil contoh: file_1.pdf
         $file_temp = $_FILES['file']['tmp_name']; //data temp yang di upload
         $folder = "file"; //folder tujuan
 
@@ -26,9 +26,9 @@ if (isset($_POST['simpan'])) {
         //update nama file di database
         mysqli_query($koneksi, "UPDATE tb_dok  SET file='$nama_baru' WHERE nama='$data[nama]' ");
 //ganti nama file
-        $query = mysqli_query($koneksi, "SELECT nama, tgl_upload FROM tb_dok  ORDER BY id_dok DESC LIMIT 1");
+        $query = mysqli_query($koneksi, "SELECT nama, tahun FROM tb_dok  ORDER BY id_dok DESC LIMIT 1");
         $data = mysqli_fetch_array($query);
-        $nama_baru = date('d-m-Y', strtotime($data['tgl_upload'])) . "-" . $data['nama'];
+        $nama_baru = date('d-m-Y', strtotime($data['tahun'])) . "-" . $data['nama'];
         mysqli_query($koneksi, "UPDATE tb_dok  SET nama='$nama_baru' WHERE nama='$data[nama]' ");
         // header('location:../ep/data.php?alert=upload-berhasil');
         echo "

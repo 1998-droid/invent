@@ -51,6 +51,10 @@ function PreviewImage() {
                                                 <option value="permen">Peraturan Menteri</option>
                                                 <option value="perbup">Peraturan Bupati</option>
                                                 <option value="perrs">Peraturan Rumah Sakit</option>
+                                                <option value="perdir">Peraturan Direktur</option>
+                                                <option value="izin">Perizinan</option>
+                                                <option value="sertifpeg">Sertifikat Pegawai</option>
+                                                <option value="sertifrs">Sertifikat Rumah Sakit</option>
                                             </select>
                                             <label for="floatingInputGrid">Jenis Dokumen</label>
                                         </div>

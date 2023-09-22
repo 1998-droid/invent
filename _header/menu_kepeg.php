@@ -31,8 +31,6 @@ if ($_SESSION["role"] == "kepeg") {?>
             </a>
             <div class="collapse" id="collapseLayouts1" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                 <nav class="sb-sidenav-menu-nested nav">
-                    <a class="nav-link" href="../kepeg"><i class="fa-solid fa-file"></i>&nbsp; Data
-                        Kepegawaian</a>
                     <a class="nav-link" href="../d_thdsk"><i class="fa-solid fa-file"></i>&nbsp; Data
                         THDSK</a>
                     <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp; Data
