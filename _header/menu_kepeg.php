@@ -35,7 +35,7 @@ if ($_SESSION["role"] == "kepeg") {?>
                         THDSK</a>
                     <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp; Data
                         STR</a>
-                    <a class="nav-link" href="../UU"><i class="fa-solid fa-file"></i>&nbsp;Data
+                    <a class="nav-link" href="kepeg.php?page=UU"><i class="fa-solid fa-file"></i>&nbsp;Data
                         UU</a>
                     <a class="nav-link" href="../Perda"><i class="fa-solid fa-file"></i>&nbsp;Data
                         Perda</a>
@@ -43,9 +43,9 @@ if ($_SESSION["role"] == "kepeg") {?>
                         Permen</a>
                     <a class="nav-link" href="../Perbup"><i class="fa-solid fa-file"></i>&nbsp; Data
                         Perbup</a>
-                    <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp;Data
+                    <a class="nav-link" href="../Per_RS"><i class="fa-solid fa-file"></i>&nbsp;Data
                         Per RS</a>
-                    <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp;Data
+                    <a class="nav-link" href="../Perdir"><i class="fa-solid fa-file"></i>&nbsp;Data
                         Perdir</a>
                     <a class="nav-link" href="layout-sidenav-light.html"><i class="fa-solid fa-file"></i>&nbsp;Data
                         Perizinan</a>
@@ -55,6 +55,9 @@ if ($_SESSION["role"] == "kepeg") {?>
                         Sertif RS</a>
                 </nav>
             </div>
+            <?php
+include_once "proses.php"
+    ?>
             <div class="sb-sidenav-menu-heading">Interface</div>
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#semuadata"
                 aria-expanded="false" aria-controls="collapseLayouts">
