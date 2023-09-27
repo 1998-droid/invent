@@ -47,33 +47,3 @@ while ($data = mysqli_fetch_array($sql)) {
         <a class="btn btn-success" href="index.php?page=upload"><i class="fa fa-cloud-upload fa-fw"
                 aria-hidden="true"></i></a>
     </div>
-    <?php 
-if(isset($_GET["page"])){
- $page= $_GET["page"];
-}
-
-else{
- $page=upload;
-}
-
-switch ($page){
-
- case "upload":
- require ("upload.php");
- break;
-
- case "2":
- require ("tutorial.php");
- break;
-
- case "3":
- require ("artikel.php");
- break;
-
- case "4":
- require ("ebook.php");
- break;
-}
-?>
-
-</div>
