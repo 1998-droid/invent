@@ -44,6 +44,36 @@ while ($data = mysqli_fetch_array($sql)) {
         </tbody>
     </table>
     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-        <a class="btn btn-success" href="upload.php"><i class="fa fa-cloud-upload fa-fw" aria-hidden="true"></i></a>
+        <a class="btn btn-success" href="index.php?page=upload"><i class="fa fa-cloud-upload fa-fw"
+                aria-hidden="true"></i></a>
     </div>
+    <?php 
+if(isset($_GET["page"])){
+ $page= $_GET["page"];
+}
+
+else{
+ $page=upload;
+}
+
+switch ($page){
+
+ case "upload":
+ require ("home.php");
+ break;
+
+ case "2":
+ require ("tutorial.php");
+ break;
+
+ case "3":
+ require ("artikel.php");
+ break;
+
+ case "4":
+ require ("ebook.php");
+ break;
+}
+?>
+
 </div>
