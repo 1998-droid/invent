@@ -13,7 +13,7 @@
         <tbody>
             <?php
 $sql = mysqli_query($koneksi, "SELECT a.id_dok, a.nama, a.tahun, a.tgl_upload, a.subag, a.file
-FROM tb_dok a JOIN tb_user b ON a.subag=b.subag WHERE user='$_SESSION[username]' and a.jenis_dok='uu'")
+FROM tb_dok a JOIN tb_user b ON a.subag=b.subag WHERE user='$_SESSION[username]'")
 or die(mysqli_error($koneksi));
 while ($data = mysqli_fetch_array($sql)) {
     ?>

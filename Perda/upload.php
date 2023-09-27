@@ -25,7 +25,7 @@ function PreviewImage() {
                                     <div class="col-md-4">
                                         <div class="form-floating">
                                             <input type="text" class="form-control" name="nama" id="floatingInputGrid"
-                                                placeholder="Nama Dokumen" required>
+                                                placeholder="Nama" required>
                                             <label for="floatingInputGrid">Nama Dokumen</label>
                                         </div>
                                     </div>
@@ -36,6 +36,7 @@ function PreviewImage() {
                                             <label for="floatingInputGrid">Tahun</label>
                                         </div>
                                     </div>
+
                                     <div class="col-md-4">
                                         <div class="form-floating">
                                             <input type="text" class="form-control" name="subag" id="floatingInputGrid"
@@ -45,21 +46,13 @@ function PreviewImage() {
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-floating">
-                                            <select id="inputState" class="form-select" name="jenis_dok" readonly>
-                                                <option value="uu">Undang-undang</option>
-                                                <option value="perda">Peraturan Daerah</option>
-                                                <option value="permen">Peraturan Menteri</option>
-                                                <option value="perbup">Peraturan Bupati</option>
-                                                <option value="perrs">Peraturan Rumah Sakit</option>
-                                                <option value="perdir">Peraturan Direktur</option>
-                                                <option value="izin">Perizinan</option>
-                                                <option value="sertifpeg">Sertifikat Pegawai</option>
-                                                <option value="sertifrs">Sertifikat Rumah Sakit</option>
-                                            </select>
-                                            <label for="floatingInputGrid">Jenis Dokumen</label>
+                                            <input type="text" class="form-control" name="jenis_dok"
+                                                id="floatingInputGrid" placeholder="nomor" value="perda" required
+                                                readonly>
+                                            </input>
+                                            <label for="floatingSelectGrid">Peraturan Daerah</label>
                                         </div>
                                     </div>
-
 
                                     <div class="row g-2">
                                         <div class="col-md-4 mt-4">
@@ -74,12 +67,14 @@ function PreviewImage() {
                                                 onclick="return confirm('File Sudah Benar ?')" type="submit"
                                                 name="simpan"><i class="fa fa-check-circle fa-lg"
                                                     aria-hidden="true"></i>
-                                            </button>
+
                                         </div>
 
                                         <div class="col-md-1 mt-1">
-                                            <input class="w-100 btn btn-primary btn-xs" type="button" value="Preview"
-                                                onclick="PreviewImage();" />
+                                            <button class="w-100 btn btn-primary btn-xs" type="button"
+                                                onclick="PreviewImage();">
+                                                <i class="fa fa-eye fa-lg" aria-hidden="true"></i>
+                                            </button>
                                         </div>
 
                                         <div style="clear:both">

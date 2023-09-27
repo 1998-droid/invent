@@ -16,14 +16,14 @@ include_once "../_header/kepeg.php";
                             <form action="pro.php" method="post" enctype="multipart/form-data">
                                 <?php
 $id = mysqli_real_escape_string($koneksi, $_GET['id']);
-$query = mysqli_query($koneksi, "SELECT * FROM uu
-        WHERE id_uu='$id' ");
+$query = mysqli_query($koneksi, "SELECT * FROM tb_perbup
+        WHERE id_perbup='$id' ");
 $data = mysqli_fetch_array($query);
 ?>
                                 <div class="row g-2">
                                     <div class="col-md-4">
                                         <div class="form-floating">
-                                            <input type="hidden" name="id" value="<?=($data['id_uu'])?>">
+                                            <input type="hidden" name="id" value="<?=($data['id_perbup'])?>">
                                             <input type="text" class="form-control" name="nama" id="floatingInputGrid"
                                                 value="<?=($data['nama'])?>" placeholder="nama" required readonly>
                                             <label for="floatingInputGrid">nama</label>

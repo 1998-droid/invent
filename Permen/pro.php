@@ -8,11 +8,11 @@ if (isset($_POST['simpan'])) {
         $subag = trim($_POST['subag']);
         $file = trim($_FILES['file']['name']);
 
-        $sql = "INSERT INTO uu  (nama, tahun, subag) VALUES ('$nama', '$tahun','$subag')";
+        $sql = "INSERT INTO tb_permen  (nama, tahun, subag) VALUES ('$nama', '$tahun','$subag')";
         mysqli_query($koneksi, $sql); //simpan data judul dahulu untuk mendapatkan id
 
         //dapatkan id terkahir
-        $query = mysqli_query($koneksi, "SELECT nama, tgl_upload FROM uu  ORDER BY id_uu DESC LIMIT 1");
+        $query = mysqli_query($koneksi, "SELECT nama, tgl_upload FROM tb_permen  ORDER BY id_permen DESC LIMIT 1");
         $data = mysqli_fetch_array($query);
 
         //mengganti nama pdf
@@ -22,9 +22,9 @@ if (isset($_POST['simpan'])) {
 
         move_uploaded_file($file_temp, "$folder/$nama_baru"); //fungsi upload
         //update nama file di database
-        mysqli_query($koneksi, "UPDATE uu  SET file='$nama_baru' WHERE nama='$data[nama]' ");
+        mysqli_query($koneksi, "UPDATE tb_permen  SET file='$nama_baru' WHERE nama='$data[nama]' ");
 //ganti nama file
-        $query = mysqli_query($koneksi, "SELECT nama, tgl_upload FROM uu  ORDER BY id_uu DESC LIMIT 1");
+        $query = mysqli_query($koneksi, "SELECT nama, tgl_upload FROM tb_permen  ORDER BY id_permen DESC LIMIT 1");
         $data = mysqli_fetch_array($query);
         $nama_baru = date('d-m-Y', strtotime($data['tgl_upload'])) . "-" . $data['nama'];
         mysqli_query($koneksi, "UPDATE uu  SET nama='$nama_baru' WHERE nama='$data[nama]' ");
