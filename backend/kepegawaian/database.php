@@ -59,7 +59,7 @@ else{
 switch ($page){
 
  case "upload":
- require ("home.php");
+ require ("upload.php");
  break;
 
  case "2":
