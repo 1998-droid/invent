@@ -23,8 +23,38 @@ include_once "../_header/kepeg.php";
                     <?php
 include_once "../backend/kepegawaian/database.php";
 ?>
+                    <?php 
+if(isset($_GET["page"])){
+ $page= $_GET["page"];
+}
+
+else{
+ $page=upload;
+}
+
+switch ($page){
+
+ case "upload":
+ require ("upload.php");
+ break;
+
+ case "2":
+ require ("tutorial.php");
+ break;
+
+ case "3":
+ require ("artikel.php");
+ break;
+
+ case "4":
+ require ("ebook.php");
+ break;
+}
+?>
+
                 </div>
             </div>
+        </div>
     </main>
 
     <?php
