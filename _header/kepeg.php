@@ -40,7 +40,7 @@ if ($_SESSION['role'] == "") {
 </head>
 
 <body class="sb-nav-fixed">
-    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-blue">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-primary">
         <!-- Navbar Brand-->
         <a class="navbar-brand ps-3" href="../index.html"><b>Repository</b></a>
         <!-- Sidebar Toggle-->
